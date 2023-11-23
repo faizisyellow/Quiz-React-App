@@ -1,0 +1,40 @@
+@import "./vars.scss";
+@font-face {
+  font-family: "gothambold";
+  src: url("../fonts/gotham_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "gothambold", sans-serif;
+  background: $bg;
+  color: $bg;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 100vh;
+}
+.loader {
+  position: absolute;
+  bottom: 50%;
+  left: 48%;
+  width: 48px;
+  height: 48px;
+  border: 5px solid $main;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
