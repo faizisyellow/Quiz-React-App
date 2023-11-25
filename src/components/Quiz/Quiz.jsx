@@ -1,6 +1,7 @@
 // Quiz.jsx
 import { useEffect, useState } from "react";
 import "./Quiz.scss";
+import AuthDetails from "../AuthDetails";
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answerIdx, setAnswerIdx] = useState(null);
