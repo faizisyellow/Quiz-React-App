@@ -4,7 +4,7 @@ import SignIn from "./components/Auth/SignIn";
 import Quiz from "./components/Quiz/Quiz";
 import SignUp from "./components/Auth/SignUp";
 import AuthDetails from "./components/AuthDetails";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
 import { auth } from "./firebase";
 
 function App() {
@@ -45,7 +45,14 @@ function App() {
         <Route path="/" element={currentUser ? <Quiz questions={questions} /> : <Navigate to={"/login"} />} />
         <Route path="/login" element={currentUser ? <Navigate to={"/"} /> : <SignIn />} />
         <Route path="/signup" element={currentUser ? <Navigate to={"/"} /> : <SignUp />} />
-        <Route path="/auth" element={<AuthDetails />} />
+        <Route
+          path="/auth"
+          element={
+            <Link to="/auth">
+              <AuthDetails />
+            </Link>
+          }
+        />
       </Routes>
     </Router>
   );
