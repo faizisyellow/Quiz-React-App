@@ -14,7 +14,7 @@ const Quiz = ({ questions }) => {
   });
   // console.log(result);
   const [showResult, setShowResult] = useState(false);
-  const [timer, setTimer] = useState(600);
+  const [timer, setTimer] = useState(1200);
   useEffect(() => {
     let interval;
 

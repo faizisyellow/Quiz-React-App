@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://opentdb.com/api.php?amount=5&category=11");
+        const response = await fetch("https://opentdb.com/api.php?amount=25&category=11");
         const data = await response.json();
         const formattedQuestions = data.results.map((question) => ({
           question: question.question,
@@ -43,16 +43,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={currentUser ? <Quiz questions={questions} /> : <Navigate to={"/login"} />} />
+        <Route path="/auth" element={<AuthDetails />} />
         <Route path="/login" element={currentUser ? <Navigate to={"/"} /> : <SignIn />} />
         <Route path="/signup" element={currentUser ? <Navigate to={"/"} /> : <SignUp />} />
-        <Route
-          path="/auth"
-          element={
-            <Link to="/auth">
-              <AuthDetails />
-            </Link>
-          }
-        />
       </Routes>
     </Router>
   );

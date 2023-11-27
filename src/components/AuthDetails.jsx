@@ -26,7 +26,7 @@ const AuthDetails = () => {
       .catch((error) => console.log(error.message));
   };
   return (
-    <div style={{ color: "red" }}>
+    <div style={{ color: "black" }}>
       {authUser ? (
         <>
           <p>{`Signed in as ${authUser.email}`}</p>

@@ -34,7 +34,11 @@ const SignIn = () => {
 
         <button type="submit">Log in</button>
         <p>
-          Have no account?<Link to="/signup">Sign Up</Link>
+          Have no account?
+          <Link to="/signup" style={{ textDecoration: "none" }}>
+            {" "}
+            Sign Up
+          </Link>
         </p>
       </form>
     </div>
