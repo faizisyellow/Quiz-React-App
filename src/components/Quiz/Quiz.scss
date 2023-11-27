@@ -20,7 +20,7 @@
   .total-question {
     font-size: 16px;
     font-weight: 500;
-    color: $disabled;
+    color: $text;
   }
   h2 {
     padding-top: 10px;
@@ -39,7 +39,7 @@
       list-style: none;
       color: $bg;
       font-size: 16px;
-      background: #4b0082;
+      background: $foreground;
       border: 1px solid $bg;
       border-radius: 12px;
       padding: 11px;
